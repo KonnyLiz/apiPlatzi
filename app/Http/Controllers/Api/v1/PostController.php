@@ -16,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        // traemos los ultimos posts paginados
+        $posts = Post::latest()->paginate();
+        return PostResource::collection($posts);
     }
 
     /**
@@ -62,6 +64,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return response('', 204);
     }
 }

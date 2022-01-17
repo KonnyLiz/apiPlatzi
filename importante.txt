@@ -9,3 +9,9 @@ Veamos la lista de rutas
 
 Los resource son para formatear los datos a entregar en la api, y lo hacemos con Eloquent
     php artisan make:resource v1/PostResource
+
+devolviendo los datos con collection, crea el array de datos para mostrar.
+
+Laravel manda los links de paginacion por json para consumirlos
+    ver en http://apiplatzi.test/api/v1/posts
+    
