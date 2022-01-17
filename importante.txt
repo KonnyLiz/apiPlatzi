@@ -1,0 +1,11 @@
+
+Para crear un nuevo controlador para la api lo creamos en una carpeta Api
+y v1 para mantener el versionado
+Con --api crea las posibles rutas de la api y model post se conecta con el model
+    Api/v1/PostController --api --model=Post
+
+Veamos la lista de rutas
+    php artisan route:list 
+
+Los resource son para formatear los datos a entregar en la api, y lo hacemos con Eloquent
+    php artisan make:resource v1/PostResource
